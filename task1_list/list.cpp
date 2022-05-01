@@ -98,7 +98,14 @@ void editCar(List* pRoot, char* plateNum)
 
 void printAll(List* pRoot) 
 {
+	List* temp = pRoot;
 
+	while (nullptr != temp->pNext)
+	{
+		cout << "Plate number: " << temp->pPlateNum << endl;
+		cout << "Entry time: " << temp->entryTime << endl;
+		temp = temp->pNext;
+	}
 }
 
 int numberOfElements(List* pRoot) //Function showing number of elements.
